@@ -8,7 +8,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 def scrape_all():
     executable_path = {'executable_path': ChromeDriverManager().install()}
-    browser = Browser('chrome', **executable_path, headless=True)
+    browser = Browser('chrome', **executable_path, headless=False)
 
     news_title, news_paragraph = mars_news(browser)
     img_urls_titles = mars_hemis(browser)
